@@ -8,7 +8,7 @@
       "name": "goodtaco",
       "source": {
         "source": "local",
-        "path": "./plugins/goodtaco"
+        "path": "./codex/goodtaco"
       },
       "policy": {
         "installation": "AVAILABLE",

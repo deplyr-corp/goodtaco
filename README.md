@@ -23,5 +23,7 @@ Prefer plain Claude (web, desktop or phone)? Add GoodTaco from Claude's connecto
 
 Help: https://goodtaco.ai/claude · Support: hello@goodtaco.ai · Privacy: https://goodtaco.ai/privacy-policy
 
-This repository is generated from GoodTaco's main codebase (`app/scripts/build-goodtaco-plugin.mjs`); changes made
-here directly are overwritten.
+`plugins/goodtaco` is the Claude plugin; `codex/goodtaco` is the same plugin for Codex. This repository is generated
+from GoodTaco's main codebase (`app/scripts/build-goodtaco-plugin.mjs`); changes made here directly are overwritten.
+
+License: MIT.

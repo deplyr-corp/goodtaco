@@ -1,0 +1,7 @@
+{
+  "environment": "production",
+  "plugin": "goodtaco",
+  "mcp_server": "goodtaco",
+  "mcp_url": "https://server.goodtaco.ai/mcp/connector",
+  "console_url": "https://console.goodtaco.ai"
+}
