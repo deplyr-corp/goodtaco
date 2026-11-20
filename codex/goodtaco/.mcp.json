@@ -1,12 +1,7 @@
 {
   "mcpServers": {
     "goodtaco": {
-      "type": "http",
-      "url": "https://server.goodtaco.ai/mcp/connector",
-      "oauth_resource": "https://server.goodtaco.ai/mcp/connector",
-      "scopes": [
-        "goodtaco:developer-tools"
-      ]
+      "url": "https://server.goodtaco.ai/mcp/connector"
     }
   }
 }

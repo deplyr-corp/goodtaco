@@ -1,6 +1,6 @@
-# GoodTaco for Claude and Codex
+# GoodTaco for Claude, ChatGPT and Codex
 
-Build, preview and publish [GoodTaco](https://goodtaco.ai) apps with your own Claude or Codex subscription. Your AI
+Build, preview and publish [GoodTaco](https://goodtaco.ai) apps with your own Claude, ChatGPT or Codex plan. Your AI
 builds the app; GoodTaco compiles it, hosts it on a preview link and publishes it when you say so. Nothing is installed
 or built on your computer.
 
@@ -15,15 +15,23 @@ or built on your computer.
 /plugin install goodtaco@goodtaco
 ```
 
-**Codex:** add this repository as a plugin marketplace and install `goodtaco`.
+**Codex:**
 
-The first time you use it, sign in to GoodTaco in your browser, pick your workspace and click **Allow**.
+```
+codex plugin marketplace add deplyr-corp/goodtaco
+codex plugin add goodtaco@goodtaco
+```
 
-Prefer plain Claude (web, desktop or phone)? Add GoodTaco from Claude's connector list instead; it's the same service.
+The first time you use it, sign in to GoodTaco in your browser, pick your workspace and click **Connect**.
 
-Help: https://goodtaco.ai/claude · Support: hello@goodtaco.ai · Privacy: https://goodtaco.ai/privacy-policy
+Prefer plain Claude or ChatGPT (web, desktop or phone)? Add GoodTaco from Claude's connectors or ChatGPT's plugins
+instead; it's the same service and the same apps.
 
-`plugins/goodtaco` is the Claude plugin; `codex/goodtaco` is the same plugin for Codex. This repository is generated
-from GoodTaco's main codebase (`app/scripts/build-goodtaco-plugin.mjs`); changes made here directly are overwritten.
+Help: https://goodtaco.ai/claude · https://goodtaco.ai/chatgpt · Support: hello@goodtaco.ai · Privacy:
+https://goodtaco.ai/privacy-policy
+
+`plugins/goodtaco` is the Claude plugin; `codex/goodtaco` is the same plugin as an Agent Plugins package for OpenAI
+(Codex installs it, and it's the ChatGPT/Codex directory submission). This repository is generated from GoodTaco's main
+codebase (`app/scripts/build-goodtaco-plugin.mjs`); changes made here directly are overwritten.
 
 License: MIT.

@@ -1,0 +1,107 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "goodtaco",
+  "version": "0.4.0",
+  "description": "Build, preview and publish GoodTaco apps from ChatGPT or Codex. Sign in to GoodTaco once, then ask for an app: your AI builds it on your own plan, GoodTaco compiles and hosts it on a preview link, and it goes live when you say so.",
+  "author": {
+    "name": "GoodTaco",
+    "url": "https://goodtaco.ai",
+    "email": "hello@goodtaco.ai"
+  },
+  "homepage": "https://goodtaco.ai",
+  "repository": "https://github.com/deplyr-corp/goodtaco",
+  "license": "MIT",
+  "keywords": [
+    "goodtaco",
+    "apps",
+    "no-code",
+    "deploy",
+    "mcp"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "GoodTaco",
+        "shortDescription": "Build apps for your business",
+        "longDescription": "GoodTaco turns your AI into an app builder for your business. Describe the tool your team needs in plain words, like a work order tracker for your crew, an inventory list or a job schedule, and it builds it on GoodTaco: it sets up the app's database, writes the screens and logic, opens the app to check it works, and puts it on a private preview link. When you like it, ask it to publish the app and your team uses it from any phone or computer.\n\nIt can also use the Google Sheets, Gmail and other services you've connected in GoodTaco, read an app's logs to fix problems, and go back to an earlier version. GoodTaco hosts and runs the apps; the building happens on your own AI plan.\n\nYou sign in on GoodTaco's own page and pick the workspace it may use. Nothing is published unless you ask. It works on GoodTaco apps only: it can't delete apps or workspaces, connect outside accounts for you (you do that in GoodTaco), or reach apps in workspaces you didn't choose.",
+        "developerName": "GoodTaco",
+        "category": "Productivity",
+        "capabilities": [
+          "Build apps",
+          "Create app databases",
+          "Edit app screens and logic",
+          "Check apps in a browser",
+          "Publish apps",
+          "Use connected Google Sheets and Gmail"
+        ],
+        "websiteURL": "https://goodtaco.ai",
+        "supportURL": "https://goodtaco.ai/chatgpt",
+        "privacyPolicyURL": "https://goodtaco.ai/privacy-policy",
+        "termsOfServiceURL": "https://goodtaco.ai/terms-of-service",
+        "defaultPrompt": [
+          "Build a work order tracker for my crew and give me the preview link.",
+          "Show me my GoodTaco apps and what each one does.",
+          "Add a priority field to my work order tracker."
+        ],
+        "brandColor": "#0097B2",
+        "composerIcon": "./assets/logo.png",
+        "logo": "./assets/logo.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Build a new app with its own database",
+              "prompt": "Build a simple work order tracker for my plumbing crew with a database, and give me the preview link.",
+              "tools_triggered": "get_build_guide, create_app, add_database, create_table, write_files, build_preview, view_app",
+              "expected_behavior": "Creates a new app, adds a database with a work orders table, writes the app, builds it, checks the running app, and returns the preview link. It does not publish the app."
+            },
+            {
+              "description": "List the workspace's apps",
+              "prompt": "Show me the apps in my GoodTaco workspace.",
+              "tools_triggered": "list_apps",
+              "expected_behavior": "Lists the apps in the connected workspace by name with a short description and link for each."
+            },
+            {
+              "description": "Change an existing app",
+              "prompt": "Add a priority field (low, normal, urgent) to my work order tracker and put the change on the preview link.",
+              "tools_triggered": "list_apps, get_database, add_column, read_files, edit_files, build_preview",
+              "expected_behavior": "Finds the work order tracker, adds a priority column to its table, updates the screens to show and set it, builds a new preview version and returns the preview link."
+            },
+            {
+              "description": "Look at the running app",
+              "prompt": "Open my work order tracker and tell me what is on its main screen.",
+              "tools_triggered": "list_apps, view_app",
+              "expected_behavior": "Opens the app's preview and describes what the main screen shows, based on the screenshot it took."
+            },
+            {
+              "description": "Publish when asked",
+              "prompt": "Publish my work order tracker.",
+              "tools_triggered": "list_apps, publish_app",
+              "expected_behavior": "Publishes the version on the preview link after the person confirms, and returns the app's live link."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Unrelated question",
+              "prompt": "What's the weather in Chicago today?"
+            },
+            {
+              "description": "Unrelated writing task",
+              "prompt": "Write a short poem about tacos."
+            },
+            {
+              "description": "Unsupported deletion",
+              "prompt": "Delete all of my GoodTaco apps."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "GoodTaco doesn't sell anything or take payments in ChatGPT or Codex."
+      },
+      "publication": {
+        "release_notes": "First release: build, check, change and publish GoodTaco apps, with their databases, Google Sheets and Gmail."
+      }
+    }
+  }
+}

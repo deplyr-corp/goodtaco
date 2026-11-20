@@ -1,7 +1,7 @@
 {
   "name": "goodtaco",
   "displayName": "GoodTaco",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "Build, preview and publish GoodTaco apps with Claude or Codex. Sign in to GoodTaco once, then ask for an app: your AI builds it with your own subscription, GoodTaco compiles and hosts it on a preview link, and it goes live when you say so.",
   "author": {
     "name": "GoodTaco",

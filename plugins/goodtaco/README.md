@@ -27,5 +27,5 @@ so an app you start in one carries on in the other.
 
 The first time you use it, GoodTaco asks you to sign in once. In the Claude desktop app, open the plugin's GoodTaco
 connector and click **Connect**; in Claude Code, type `/mcp`, choose GoodTaco and pick **Authenticate**; Codex asks
-on first use. Sign in, pick your workspace and click **Allow**. You never paste a password or key into the chat.
+on first use. Sign in, pick your workspace and click **Connect**. You never paste a password or key into the chat.
 You can remove access any time from your GoodTaco settings at https://console.goodtaco.ai.

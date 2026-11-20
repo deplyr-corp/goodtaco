@@ -26,10 +26,10 @@ to sign in, tell the person in plain words that GoodTaco needs them to sign in o
 - In Claude Code: type `/mcp`, choose GoodTaco and pick **Authenticate**.
 - In Codex: it asks them to sign in the first time GoodTaco is used.
 
-They sign in to GoodTaco in their browser, pick a workspace and click **Allow**. Never ask them to paste a token,
+They sign in to GoodTaco in their browser, pick a workspace and click **Connect**. Never ask them to paste a token,
 key or password into the chat, and never say GoodTaco is connected until its tools answer.
 
-If two GoodTaco servers are available (the person also added the GoodTaco connector in Claude), use either one. They
+If two GoodTaco servers are available (the person also added the GoodTaco connector by hand), use either one. They
 are the same service and see the same apps.
 
 ## Working with the person
