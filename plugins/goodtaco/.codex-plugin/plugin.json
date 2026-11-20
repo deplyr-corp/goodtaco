@@ -1,0 +1,40 @@
+{
+  "name": "goodtaco",
+  "version": "0.3.0",
+  "description": "Build, preview and publish GoodTaco apps with Claude or Codex. Sign in to GoodTaco once, then ask for an app: your AI builds it with your own subscription, GoodTaco compiles and hosts it on a preview link, and it goes live when you say so.",
+  "author": {
+    "name": "GoodTaco",
+    "url": "https://goodtaco.ai"
+  },
+  "homepage": "https://goodtaco.ai",
+  "keywords": [
+    "goodtaco",
+    "apps",
+    "no-code",
+    "deploy",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "GoodTaco",
+    "shortDescription": "Build and publish GoodTaco apps",
+    "longDescription": "Build, preview and publish GoodTaco apps with Claude or Codex. Sign in to GoodTaco once, then ask for an app: your AI builds it with your own subscription, GoodTaco compiles and hosts it on a preview link, and it goes live when you say so.",
+    "developerName": "GoodTaco",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://goodtaco.ai",
+    "privacyPolicyURL": "https://goodtaco.ai/privacy-policy",
+    "termsOfServiceURL": "https://goodtaco.ai/terms-of-service",
+    "defaultPrompt": [
+      "Build me a GoodTaco app for this and put it on a preview link"
+    ],
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/logo.png",
+    "screenshots": [],
+    "brandColor": "#0097B2"
+  }
+}

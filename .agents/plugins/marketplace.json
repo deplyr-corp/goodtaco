@@ -1,0 +1,20 @@
+{
+  "name": "goodtaco",
+  "interface": {
+    "displayName": "GoodTaco"
+  },
+  "plugins": [
+    {
+      "name": "goodtaco",
+      "source": {
+        "source": "local",
+        "path": "./plugins/goodtaco"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}
